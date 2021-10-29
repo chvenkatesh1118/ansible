@@ -1,9 +1,0 @@
--name : play level variables
-  hosts:all
-  vars:
-   URL: play.exmaple.com
-   
-   tasks:
-   -name :access url in task1
-   ansible.builtin.debug:
-   msg:url in task1 ={{URL}}

@@ -1,0 +1,6 @@
+- name : sample playbook
+  hosts:
+  - all
+   tasks:
+   - debug:
+   msg:hellow world

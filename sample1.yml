@@ -10,13 +10,4 @@
       ansible.builtin.debug:
         msg: URL in Task2 = {{URL}}
 
-# above code varible in play level
 
-- name: Demo on File Variables
-  hosts: all
-  vars_files:
-    - sample-vars.yml
-  tasks:
-    - name: Access URL
-     ansible.builtin.debug:
-       msg: URL = {{URL}}

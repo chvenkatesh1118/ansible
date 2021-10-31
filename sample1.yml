@@ -12,10 +12,10 @@
 
 # above code varible in play level
 
-  - name: demo on file variables
+- name: Demo on file variables
    hosts: all
    vars_files:
-     - sample-vars.yml
+    - sample-vars.yml
    tasks:
      - name: access url
         ansible.builtin.debug:

@@ -12,7 +12,7 @@
 
 # above code varible in play level
 
-  -name: demo on file variables
+  - name: demo on file variables
    hosts: all
    vars_files:
      - sample-vars.yml

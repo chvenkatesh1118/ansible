@@ -1,4 +1,4 @@
 - name: setup frontend
-  hosts: frontend
+  hosts: fontend.roboshop.internal
   roles:
     - frontend

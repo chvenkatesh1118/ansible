@@ -1,0 +1,4 @@
+- name: setup fromtend
+  hosts: frontend
+  roles:
+    - frontend

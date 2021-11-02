@@ -1,4 +1,4 @@
 - name: setup frontend
   hosts: 172.31.82.13
-  tasks:
+  roles:
     - frontend

@@ -1,0 +1,4 @@
+- name: print frontend
+  yum:
+    name: nginx
+    state: latest

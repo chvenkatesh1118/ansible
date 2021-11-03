@@ -1,5 +1,7 @@
-- name: Install Nginx
+---
+- hosts: [mainserver]
+  remote_user: root
   become: yes
-  yum:
-    name= nginx
-    state= latest
+  tasks:
+    - name: install apache
+      yum: name=httpd state=present

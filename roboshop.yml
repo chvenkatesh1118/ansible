@@ -1,6 +1,6 @@
 ---
-- hosts: [mainserver]
-  remote_user: root
+- hosts: frontend
+
   become: yes
   tasks:
     - name: install apache

@@ -1,6 +1,7 @@
 - name: print frontend
-  debug:
-     msg: frontend
+  yum:
+     name: nginx
+     state: latest
 
 
 7

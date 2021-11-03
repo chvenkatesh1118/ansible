@@ -1,6 +1,6 @@
 - name: Setup Frontend
   hosts: frontend
   become: true
-  tags: frontend
+  tags: frontend.yml
   roles:
-    - frontend
+    - frontend.yml

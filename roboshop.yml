@@ -1,8 +1,5 @@
 - name: Install Nginx
+  become: true
   yum:
-
-    - name: update
-      apt: update_cache=yes
-
-    - name: Install Nginx
-      apt: name=nginx state=latest
+    name: nginx
+    state: latest

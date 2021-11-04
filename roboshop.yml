@@ -1,11 +1,6 @@
 - name: Setup Frontend
   hosts: frontend
 
+  tags: 1.yml
   tasks:
-    - name: Print venkatesh
-      debug:
-        msg: Hello venkatesh
-
-    - name: Print chanti
-      debug:
-         msg: chanti
+    - frontend

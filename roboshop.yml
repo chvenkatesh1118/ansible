@@ -2,6 +2,10 @@
   hosts: frontend
 
   tasks:
-    - name: Print HelloWorld
+    - name: Print venkatesh
       debug:
-        msg: Hello World
+        msg: Hello venkatesh
+
+    - name: Print chanti
+      debug:
+         msg: chanti

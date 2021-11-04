@@ -1,6 +1,5 @@
 - name: Setup Frontend
   hosts: frontend
-
-  tags: 1
-  tasks:
-    - 1
+  tags: frontend
+  roles:
+    - frontend

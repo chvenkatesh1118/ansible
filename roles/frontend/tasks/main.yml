@@ -1,10 +1,6 @@
-- name: Setup Frontend
-  hosts: frontend
-
-  tasks:
-    - name: Print HelloWorld
-      debug:
-        msg: Hello World
-
+- name: Install Nginx
+  yum:
+    name: nginx
+    state: latest
 
   7

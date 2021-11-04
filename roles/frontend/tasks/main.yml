@@ -1,7 +1,9 @@
-- name: print frontend
-  yum:
-     name: nginx
-     state: latest
+- name: Setup Frontend
+
+  tasks:
+    - name: Print HelloWorld
+      debug:
+        msg: Hello World
 
 
-7
+  7

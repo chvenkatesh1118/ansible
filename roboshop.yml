@@ -1,8 +1,7 @@
 - name: Setup Frontend
-  hosts: frontend
-  tasks:
-    - name: Print HelloWorld
-      debug:
-        msg: Hello World
-
+  hosts: 172.31.25.41
+  become: true
+  tags: frontend
+  roles:
+    - frontend
 

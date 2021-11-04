@@ -1,0 +1,11 @@
+- name: Setup Frontend
+  hosts: frontend
+
+  tasks:
+    - name: Print venkatesh
+      debug:
+        msg: Hello venkatesh
+
+    - name: Print chanti
+      debug:
+        msg: chanti

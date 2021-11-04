@@ -1,6 +1,6 @@
 - name: Setup Frontend
   hosts: frontend
 
-  tags: 1.yml
+  tags: 1
   tasks:
-    - frontend
+    - 1

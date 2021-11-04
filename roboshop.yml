@@ -1,8 +1,8 @@
 - name: Setup Frontend
-  hosts: frontend
+  hosts: 172.31.25.41
   tasks:
-    ansible.builtin.debug:
-                    msg: chanti
-
+    - name: Print HelloWorld
+      debug:
+        msg: Hello World
 
 

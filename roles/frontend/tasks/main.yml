@@ -3,3 +3,7 @@
   yum:
     name: nginx
     state: latest
+- name:
+    service:
+      name: nginx
+      state: started

@@ -1,5 +1,5 @@
 - name: Setup Frontend
-  hosts: 172.31.25.41
+  hosts: frontend
   become: true
   tags: frontend
   roles:

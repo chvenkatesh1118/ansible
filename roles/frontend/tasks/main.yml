@@ -1,4 +1,5 @@
 - name: Setup Frontend
+  hosts: frontend
 
   tasks:
     - name: Print HelloWorld

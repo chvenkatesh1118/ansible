@@ -1,5 +1,5 @@
 
-- name: ensure nginx is installed
-  service:
+- name: install nginx
+  yum:
     name: nginx
-    state: stopped
+    state: latest

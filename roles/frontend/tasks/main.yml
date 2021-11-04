@@ -1,4 +1,4 @@
 - name: setup frontend
   yum:
     name: ngnix
-    got: stop
+    state: stopped

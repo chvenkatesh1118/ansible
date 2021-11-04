@@ -1,4 +1,5 @@
-- name: setup frontend
-  yum:
-    name: ngnix
+
+- name: ensure nginx is installed
+  service:
+    name: nginx
     state: stopped

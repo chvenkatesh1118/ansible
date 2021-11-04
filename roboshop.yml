@@ -1,7 +1,7 @@
 - name: Setup Frontend
   hosts: frontend
-  become: true
-  tags: frontend
-  roles:
-    - frontend
 
+  tasks:
+    - name: Print HelloWorld
+      debug:
+        msg: Hello World

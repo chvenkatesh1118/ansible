@@ -3,7 +3,8 @@
   yum:
     name: nginx
     state: latest
-- name:
+- name: start nginx
     service:
       name: nginx
       state: started
+      enabled: yes

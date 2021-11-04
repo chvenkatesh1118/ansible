@@ -1,4 +1,7 @@
 - name: Setup Frontend
   hosts: frontend
-  debug:
-   msg: chanti
+  ansible.builtin.debug:
+    msg: chanti
+
+
+

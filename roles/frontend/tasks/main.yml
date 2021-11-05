@@ -12,4 +12,7 @@
   include_role:
     name: common
     tasks_from: download
-
+- name: Remove ngnix html file
+  ansible.builtin.file:
+    path: /usr/share/nginx/html
+    state: absent

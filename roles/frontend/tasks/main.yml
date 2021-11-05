@@ -13,8 +13,5 @@
    include_role:
      name: common
      task_from: download
-   vars:
-     APP_LOCATION: /usr/share/nginx/html/
-
 
 

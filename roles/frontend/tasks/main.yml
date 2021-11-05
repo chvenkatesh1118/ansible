@@ -10,8 +10,7 @@
     enabled: yes
 
 - name: download frontend content
-  ansible.builtin.include_role:
+  include_role:
     name: common
-    task_from: download
-
+    task_from: common
 

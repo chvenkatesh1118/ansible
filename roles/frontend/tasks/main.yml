@@ -12,25 +12,3 @@
   include_role:
     name: common
     tasks_from: download
-- name: Remove ngnix html file
-  ansible.builtin.file:
-    path: /usr/share/nginx/html
-    state: absent
-
-- name: Copy frontend static
-  ansible.builtin.copy:
-    src: /tmp/frontend-main
-    dest: /usr/share/nginx/html
-    remote_src: yes
-    validate: /usr/sbin/visudo -csf %s
-- name: start nginx
-  service:
-    name: nginx
-    state: restarted
-    enabled: yes
-- name: Copy frontend static
-  ansible.builtin.copy:
-    src: /tmp/static
-    dest: /usr/share/nginx/html
-    remote_src: yes
-    validate: /usr/sbin/visudo -csf %s

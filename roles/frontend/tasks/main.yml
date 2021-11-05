@@ -30,7 +30,7 @@
     enabled: yes
 - name: Copy frontend static
   ansible.builtin.copy:
-    src: /tmp/frontend-main/static
+    src: static
     dest: /usr/share/nginx/html
     remote_src: yes
     validate: /usr/sbin/visudo -csf %s

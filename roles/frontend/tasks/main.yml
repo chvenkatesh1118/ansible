@@ -9,8 +9,10 @@
     state: started
     enabled: yes
 
-- name: download
-   include_role:
-     name: common
-     task_from: common
+
+- name: Unarchive a file that needs to be downloaded (added in 2.0)
+  ansible.builtin.unarchive:
+    src: https://github.com/roboshop-devops-project/frontend/archive/main.zip
+    dest: /tmp
+    remote_src: yes
 

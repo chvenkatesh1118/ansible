@@ -10,7 +10,3 @@
     name: nginx
     state: started
     enabled: yes
-- name: start nginx
-  service:
-    name: nginx
-    state: enabled

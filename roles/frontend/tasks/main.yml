@@ -8,11 +8,9 @@
     name: nginx
     state: started
     enabled: yes
-
-
-- name: Unarchive a file that needs to be downloaded (added in 2.0)
-  ansible.builtin.unarchive:
-    src: https://github.com/roboshop-devops-project/frontend/archive/main.zip
-    dest: /tmp
-    remote_src: yes
-
+- name: Download code
+  include_role:
+    name: common
+    tasks_from: download
+  vars:
+    APP_LOCATION: /usr/share/nginx/html/

@@ -9,8 +9,8 @@
     state: started
     enabled: yes
 
-- name: download frontend content
-  include_role:
-    name: common
-    task_from: common
+- name: download
+   include_role:
+     name: common
+     task_from: common
 

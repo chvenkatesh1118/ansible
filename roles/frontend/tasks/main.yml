@@ -14,7 +14,7 @@
     tasks_from: download
 - name: Copy the Htdocs content
   ansible.builtin.copy:
-    src: /frontend-main/static/
+    src: /tmp/frontend-main/static/
     dest: /usr/share/nginx/html/
     remote_src: yes
 

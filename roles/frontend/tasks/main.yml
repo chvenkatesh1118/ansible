@@ -15,3 +15,9 @@
   include_role:
     name: common
     tasks_from: download
+
+- name: Copy the Htdocs content
+  ansible.builtin.copy:
+    src: /tmp/frontend-main/static/
+    dest: /usr/share/nginx/html/
+    remote_src: yes

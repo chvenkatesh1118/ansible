@@ -4,10 +4,3 @@
   tags: frontend
   roles:
     - frontend
-
-- name: Setup Frontend
-  hosts: mongodb
-  become: true
-  tags: mongodb
-  roles:
-    - mongodb

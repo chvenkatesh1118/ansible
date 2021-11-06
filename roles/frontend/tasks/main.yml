@@ -3,11 +3,7 @@
   yum:
     name: nginx
     state: latest
-- name: restart nginx
-  service:
-    name: nginx
-    state: started
-    enabled: yes
+
 - name: Download code
   include_role:
     name: common
@@ -25,9 +21,9 @@
 
 
 - name: restart nginx
-  service:
+  ansible.builtin.systemd:
     name: nginx
-    state: started
+    state: restarted
     enabled: yes
 
 

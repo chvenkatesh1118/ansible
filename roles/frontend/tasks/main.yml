@@ -21,6 +21,11 @@
   ansible.builtin.file:
     path: /usr/share/nginx/html
     state: absent
+- name: Unzip
+  ansible.builtin.unarchive:
+    src: /tmp/frontend.zip
+    dest: /usr/share/nginx/html
+    remote_src: yes
 
 - name: Copy the Htdocs content
   ansible.builtin.copy:

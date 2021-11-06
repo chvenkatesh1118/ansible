@@ -19,9 +19,10 @@
     remote_src: yes
 - name: Copy RoboShop Config file
   ansible.builtin.template:
-    src: /tmp/frontend-main/localhost.conf/
+    src: /tmp/frontend-main/localhost.conf
     dest: /etc/nginx/default.d/roboshop.conf/
     remote_src: yes
+    follow: no
 
 - name: restart nginx
   service:

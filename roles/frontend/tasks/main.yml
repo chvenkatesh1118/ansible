@@ -8,14 +8,16 @@
   include_role:
     name: common
     tasks_from: download
+
 - name: Copy the Htdocs content
   ansible.builtin.copy:
     src: /tmp/frontend-main/static/
     dest: /usr/share/nginx/html/
     remote_src: yes
+
 - name: Copy RoboShop Config file
   ansible.builtin.copy:
-    src: /tmp/frontend-main/localhost.conf
+    src: roboshop.conf
     dest: /etc/nginx/default.d/roboshop.conf
     remote_src: yes
 

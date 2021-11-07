@@ -3,9 +3,10 @@
   yum:
     name: nginx
     state: latest
+
 - name: Start Nginx Service
   ansible.builtin.systemd:
-    state: restarted
+    state: started
     name: nginx
     enabled: yes
 
@@ -25,13 +26,11 @@
     src: roboshop.conf
     dest: /etc/nginx/default.d/roboshop.conf
 
-
-
-
-- name: Restart service httpd, in all cases
-  ansible.builtin.service:
-    name: nginx
+- name: Start Nginx Service
+  ansible.builtin.systemd:
     state: restarted
+    name: nginx
+    enabled: yes
 
 
 

@@ -1,0 +1,6 @@
+hosts: all
+tasks: 
+ name : installing ngnix
+ apt:
+ name: ngnix
+ state: latest

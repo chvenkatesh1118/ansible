@@ -7,12 +7,7 @@
 #      state: latest
 
 
-- name : installing ngnix
-     - hosts: all
-      tasks:
-    - name: ensure nginx is at the latest version
-      apt: name=nginx state=latest
-    - name: start nginx
-      service:
-          name: nginx
-          state: started
+- name: Install Nginx
+  yum:
+    name: nginx
+    state: latest

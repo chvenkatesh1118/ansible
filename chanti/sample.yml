@@ -6,7 +6,9 @@
 #      name: ngnix
 #      state: latest
 
-
+ - name : installing ngnix
+ hosts: all
+ tasks:
 - name: Install Nginx
   yum:
     name: nginx

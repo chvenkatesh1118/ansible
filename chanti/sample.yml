@@ -1,6 +1,18 @@
+ 
+# - name : installing ngnix
+#  hosts: all
+#  tasks:
+#      apt:
+#      name: ngnix
+#      state: latest
 
-tasks: 
- name : installing ngnix
- apt:
- name: ngnix
- state: latest
+
+
+     - hosts: all
+  tasks:
+    - name: ensure nginx is at the latest version
+      apt: name=nginx state=latest
+    - name: start nginx
+      service:
+          name: nginx
+          state: started

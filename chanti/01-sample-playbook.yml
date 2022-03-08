@@ -1,13 +1,26 @@
-- name: Play1
+#- name: Play1
+#  hosts: all
+#  tasks:
+#    - name: Print Task1
+#      ansible.builtin.debug:
+#        msg: "Task1"
+#
+#    - name: Print Task2
+#      ansible.builtin.debug:
+#        msg: "Task2"
+#
+#- name: Play2
+#  hosts: all
+
+
+- name: one
   hosts: all
+  become: yes
   tasks:
-    - name: Print Task1
+    - name: print chanti1
       ansible.builtin.debug:
-        msg: "Task1"
+        msg: "chanti.com"
 
-    - name: Print Task2
+    - name: print chanti2
       ansible.builtin.debug:
-        msg: "Task2"
-
-- name: Play2
-  hosts: all
+        msg: "venkey.com"

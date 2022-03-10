@@ -1,0 +1,9 @@
+- name: Install Nginx
+  yum:
+     name: nginx
+     state: latest
+
+- name: Start service ngnix
+  ansible.builtin.service:
+    name: ngnix
+    state: started

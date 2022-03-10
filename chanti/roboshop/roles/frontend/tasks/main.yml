@@ -7,3 +7,10 @@
   ansible.builtin.service:
     name: nginx
     state: started
+
+
+- name: Download zip file
+  get_url:
+    url: https://github.com/roboshop-devops-project/frontend/archive/main.zip
+    dest: /tmp/frontend.zip
+    force_basic_auth: yes

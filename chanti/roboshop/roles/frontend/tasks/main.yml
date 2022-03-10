@@ -15,6 +15,13 @@
     dest: /tmp/frontend.zip
     force_basic_auth: yes
 
+
+- name: Create frontend
+  ansible.builtin.file:
+    path: /tmp/frontend
+    state: directory
+    mode: '0755'
+
 - name: Unarchive frontend
   ansible.builtin.unarchive:
     src: /tmp/frontend.zip

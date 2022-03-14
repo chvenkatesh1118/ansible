@@ -27,3 +27,9 @@
     src: /tmp/frontend.zip
     dest: /tmp/frontend
     remote_src: yes
+
+
+- name: Remove ngnix content
+  ansible.builtin.file:
+    path: /usr/share/nginx/html
+    state: absent

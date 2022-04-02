@@ -7,13 +7,13 @@
     - name: Download tomcat
       ansible.builtin.get_url:
         url: https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.20/bin/apache-tomcat-10.0.20.tar.gz
-        dest: /tmp/apache-tomcat-10.0.20.tar.gz
+        dest: /tmp/apache.tar.gz
         mode: '0440'
 
 
     - name: Download  Code
       ansible.builtin.unarchive:
-        src: /tmp/apache-tomcat-10.0.20.tar.gz
+        src: /tmp/apache.tar.gz
         dest: /tmp/tomcat
         remote_src: yes
 

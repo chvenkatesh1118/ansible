@@ -13,15 +13,15 @@
 
     - name: Download  Code
       ansible.builtin.unarchive:
-        src: https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.20/bin/apache-tomcat-10.0.20.tar.gz
+        src: https://pkg.jenkins.io/redhat-stable/jenkins.io.key
         dest: /tmp
         remote_src: yes
-
-    - name: Extract foo.tgz into /var/lib/foo
-      ansible.builtin.unarchive:
-        src: /tmp/apache-tomcat-10.0.20.tar.gz
-        dest: /tmp/tomcat
-
-
+#
+#     - name: Extract foo.tgz into /var/lib/foo
+#       ansible.builtin.unarchive:
+#         src: /tmp/apache-tomcat-10.0.20.tar.gz
+#         dest: /tmp/tomcat
+#
+#
 
 

@@ -1,6 +1,6 @@
 - name: setup tomcat
   hosts: all
-  became: true
+
   tasks:
     - name: download tomcat
       get_url:

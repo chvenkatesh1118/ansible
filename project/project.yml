@@ -2,15 +2,13 @@
   hosts: all
 
   tasks:
-    - name: download tomcat
-      get_url:
-        url: https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.20/bin/apache-tomcat-10.0.20.tar.gz
-        dest: /tmp/apache-tomcat-10.0.20.tar.gz
+    - name: download & unarchive tomcat10
+      unarchive:
+            src: https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.20/bin/apache-tomcat-10.0.20.tar.gz
+            dest: /opt/apache-tomcat-10
+            remote_src: yes
 
-    - name: Extract
-      ansible.builtin.unarchive:
-        src: /tmp/apache-tomcat-10.0.20.tar.gz
-        dest: /tmp
+
 
 
 

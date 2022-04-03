@@ -12,7 +12,7 @@
         src: /tmp/apache-tomcat-10.0.20.tar.gz
         dest: /tmp
 
-    - name: start tomcat
+    - name: cd
       ansible.builtin.shell: cd bin
     - name: start tomcat
           ansible.builtin.shell: bash startup.sh

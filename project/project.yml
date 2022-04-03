@@ -1,5 +1,6 @@
 - name: setup tomcat
   hosts: all
+  become: true
 
 - name: Download foo.conf
   get_url:

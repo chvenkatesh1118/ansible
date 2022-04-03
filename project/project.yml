@@ -1,10 +1,18 @@
-- name: Play1
+- name: setup tomcat
   hosts: all
+  became: true
   tasks:
-    - name: Print Task1
-      ansible.builtin.debug:
-        msg: "Task1"
+    - name: download tomcat
+      get_url:
+        url: https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.20/bin/apache-tomcat-10.0.20.tar.gz
+        dest: /tmp/apache-tomcat-10.0.20.tar.gz
 
-    - name: Print Task2
-      ansible.builtin.debug:
-        msg: "Task2"
+    - name: Extract
+      ansible.builtin.unarchive:
+        src: /tmp/apache-tomcat-10.0.20.tar.gz
+        dest: /tmp
+
+    - name: start tomcat
+      ansible.builtin.shell: cd bin
+    - name: start tomcat
+          ansible.builtin.shell: bash startup.sh

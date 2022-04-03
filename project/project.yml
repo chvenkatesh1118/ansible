@@ -4,7 +4,7 @@
   tasks:
     - name: download & unarchive tomcat10
       unarchive:
-            src: https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.20/bin/apache-tomcat-10.0.20.tar.gz
+            src: https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.20/bin/apache-tomcat-10.0.20.tar.gz --no-check-certificate
             dest: /tmp
             remote_src: yes
 

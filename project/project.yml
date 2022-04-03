@@ -12,7 +12,9 @@
         src: /tmp/apache-tomcat-10.0.20.tar.gz
         dest: /tmp
 
-    - name: cd
-      ansible.builtin.shell: cd bin
-    - name: start tomcat
-          ansible.builtin.shell: bash startup.sh
+    - name: Change the working directory to somedir/ before executing the command
+      ansible.builtin.shell: bash startup.sh
+      args:
+        chdir: /tmp/bin
+
+

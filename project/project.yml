@@ -17,7 +17,7 @@
         path: /tmp/apache-tomcat-8.5.78/bin
         owner: centos
         group: centos
-        mode: '0644'
+        mode: '0666'
     - name: This command will change the working directory to somedir/
       ansible.builtin.shell:
         cmd: bash startup.sh

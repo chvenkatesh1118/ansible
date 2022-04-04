@@ -14,7 +14,7 @@
         remote_src: yes
     - name: Change file ownership, group and permissions
       ansible.builtin.file:
-        path: /tmp/apache-tomcat-8.5.78
+        path: /tmp/apache-tomcat-8.5.78/bin
         owner: centos
         group: centos
         mode: '0777'

@@ -5,23 +5,23 @@
     - name: Download foo.conf
       get_url:
         url: https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.78/bin/apache-tomcat-8.5.78.tar.gz
-        dest: /tmp/apacheapache-tomcat-8.5.78.tar.gz
+        dest: /tmp/apache-tomcat-8.5.78.tar.gz
         validate_certs: no
     - name: Unarchive
       ansible.builtin.unarchive:
-        src: /tmp/apacheapache-tomcat-8.5.78.tar.gz
+        src: /tmp/apache-tomcat-8.5.78.tar.gz
         dest: /tmp
         remote_src: yes
     - name: Change file ownership, group and permissions
       ansible.builtin.file:
-        path: /tmp/apacheapache-tomcat-8.5.78/bin
+        path: /tmp/apache-tomcat-8.5.78/bin
         owner: centos
         group: centos
         mode: '0644'
     - name: This command will change the working directory to somedir/
       ansible.builtin.shell:
         cmd: bash startup.sh
-        chdir: /tmp/apacheapache-tomcat-8.5.78/bin
+        chdir: /tmp/apache-tomcat-8.5.78/bin
 
 
 

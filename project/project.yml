@@ -12,12 +12,12 @@
         src: /tmp/apacheapache-tomcat-8.5.78.tar.gz
         dest: /tmp
         remote_src: yes
-#     - name: Change file ownership, group and permissions
-#       ansible.builtin.file:
-#         path: /tmp/apacheapache-tomcat-8.5.78/bin
-#         owner: centos
-#         group: centos
-#         mode: '0644'
+    - name: Change file ownership, group and permissions
+      ansible.builtin.file:
+        path: /tmp/apacheapache-tomcat-8.5.78/bin
+        owner: centos
+        group: centos
+        mode: '0644'
     - name: This command will change the working directory to somedir/
       ansible.builtin.shell:
         cmd: bash startup.sh

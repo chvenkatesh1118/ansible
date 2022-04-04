@@ -1,11 +1,22 @@
-- name: setup tomcat
+- name: example
   hosts: all
   become: true
+  tasks:
+    - name: Download foo.conf
+      get_url:
+        url: https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.78/bin/apache-tomcat-8.5.78.tar.gz
+        dest: /tmp/apacheapache-tomcat-8.5.78.tar.gz
+        validate_certs: no
+    - name: Unarchive
+      ansible.builtin.unarchive:
+        src: /tmp/apacheapache-tomcat-8.5.78.tar.gz
+        dest: /tmp
+        remote_src: yes
+    - name: This command will change the working directory to somedir/
+      ansible.builtin.shell:
+        cmd: bash startup.sh
+        chdir: /tmp/apacheapache-tomcat-8.5.78.tar.gz/bin
 
-- name: Download foo.conf
-  get_url:
-    url: https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.20/bin/apache-tomcat-10.0.20.zip --no-check-certificate
-    dest: /tmp
 
 
 

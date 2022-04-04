@@ -4,34 +4,34 @@
   tasks:
     - name: Download foo.conf
       get_url:
-        url: https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.78/bin/apache-tomcat-8.5.78.tar.gz
-        dest: /tmp/apache-tomcat-8.5.78.tar.gz
+        url: https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.78/bin/apache-tomcat-8.5.78.zip
+        dest: /tmp/apache-tomcat-8.5.78.zip
         validate_certs: no
     - name: Unarchive
       ansible.builtin.unarchive:
-        src: /tmp/apache-tomcat-8.5.78.tar.gz
+        src: /tmp/apache-tomcat-8.5.78.zip
         dest: /opt
         remote_src: yes
 
-    - name: Change the working directory to some/ before executing the command
+    - name: change bin permision
       ansible.builtin.shell: chmod -R 777 .
       args:
         chdir: /opt/apache-tomcat-8.5.78/bin/
-    - name: Change the working directory to some/ before executing the command
+    - name: change logs permision
       ansible.builtin.shell: chmod -R 777 .
       args:
         chdir: /opt/apache-tomcat-8.5.78/logs/
-    - name: Change the working direct to somedir/ before executing the command
+    - name: change bin user
       ansible.builtin.shell: sudo chown -R centos:centos .
       args:
         chdir: /opt/apache-tomcat-8.5.78/bin/
 
-    - name: Change the working direct to somedir/ before executing the command
+    - name: change bin user
       ansible.builtin.shell: sudo chown -R centos:centos .
       args:
         chdir: /opt/apache-tomcat-8.5.78/logs/
 
-    - name: Change the working directory to somedir/ befoexecuting the command
+    - name: startup tomcat
       ansible.builtin.shell: bash startup.sh
       args:
         chdir: /opt/apache-tomcat-8.5.78/bin/

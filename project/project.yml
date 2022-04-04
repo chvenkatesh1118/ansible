@@ -11,7 +11,7 @@
       ansible.builtin.unarchive:
         src: /tmp/apache-tomcat-8.5.78.tar.gz
         dest: /opt
-        remote_src: yes
+
 
     - name: Change the working directory to some/ before executing the command
       ansible.builtin.shell: chmod -R 777 .

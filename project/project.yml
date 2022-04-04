@@ -12,13 +12,16 @@
         src: /tmp/apache-tomcat-8.5.78.tar.gz
         dest: /tmp
         remote_src: yes
-    - name: Change file ownership bin
-      ansible.builtin.file:
-        path: /tmp/apache-tomcat-8.5.78/bin/
-        owner: centos
-        group: centos
-        mode: '0777'
-
+#     - name: Change file ownership bin
+#       ansible.builtin.file:
+#         path: /tmp/apache-tomcat-8.5.78/bin/
+#         owner: centos
+#         group: centos
+#         mode: '0777'
+    - name: Change the working directory to somedir/ before executing the command
+          ansible.builtin.shell: chmod +x .
+          args:
+            chdir: /tmp/apache-tomcat-8.5.78/bin/
     - name: Change the working directory to somedir/ before executing the command
       ansible.builtin.shell: bash startup.sh
       args:

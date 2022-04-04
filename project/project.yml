@@ -25,11 +25,11 @@
         group: centos
         mode: '0777'
     - name: Change file ownership start
-          ansible.builtin.file:
-            path: /tmp/apache-tomcat-8.5.78/bin/catalina.sh
-            owner: centos
-            group: centos
-            mode: '0777'
+      ansible.builtin.file:
+        path: /tmp/apache-tomcat-8.5.78/bin/catalina.sh
+        owner: centos
+        group: centos
+        mode: '0777'
     - name: Change the working directory to somedir/ before executing the command
       ansible.builtin.shell: bash startup.sh
       args:

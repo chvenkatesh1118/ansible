@@ -3,32 +3,11 @@
   hosts: server
   become: true
   tasks:
-    - name: Update the System Packages
-      apt:
-        upgrade: yes
-        update_cache: yes
-
-    - name: Create a Tomcat User
-      user:
-        name: tomcat
-
-    - name: Create a Tomcat Group
-      group:
-        name: tomcat
 
     - name: Install JAVA
       apt:
         name: default-jdk
         state: present
-
-
-    - name: Create a Tomcat Directory
-      file:
-        path: /opt/tomcat10
-        owner: tomcat
-        group: tomcat
-        mode: 755
-        recurse: yes
 
     - name: download & unarchive tomcat10
       unarchive:

@@ -8,6 +8,7 @@
       yum:
         name: java
         state: latest
+
     - name: Download tomcat
       get_url:
         url: "https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.64/bin/apache-tomcat-9.0.64.tar.gz --no-check-certificate"

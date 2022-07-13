@@ -9,7 +9,7 @@ if [ $( echo $?) -eq  0  ]; then
 
 fi
 
-for ((i=0; i<100; i++))
+for ((i=$( echo $?); i<100; i++))
  do
    echo $i
 done

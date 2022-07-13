@@ -9,11 +9,7 @@ if [ $( echo $?) -eq  0  ]; then
 
 fi
 
-i=1
-
-while [ $i -le 100 ]
+for ((i=0; i<100; i++))
  do
-    i =$(($i+1))
    echo $i
-
-   done
+done

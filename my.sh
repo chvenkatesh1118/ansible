@@ -13,6 +13,7 @@ i=1
 
 while [ $i -le 100 ]
  do
+    i =$(($i+1))
    echo $i
-   i =$(($i+1))
+
    done

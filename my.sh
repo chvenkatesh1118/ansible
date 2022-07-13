@@ -1,4 +1,4 @@
-echo history chanti
+ history chanti
 
 
 

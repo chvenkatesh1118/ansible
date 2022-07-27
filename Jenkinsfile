@@ -1,7 +1,7 @@
 pipeline {
-agent = ${node}
+agent any
  stages {
-   stage(creat node) {
+   stage(variable) {
     steps {
      sh 'touch my.inv'
      sh 'read -p " ip of node: "  node '

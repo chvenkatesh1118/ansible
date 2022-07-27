@@ -1,37 +1,7 @@
-
-- name: install nginx
-  yum:
-    name: nginx
-    state: latest
-
-- name: Start Nginx Service
-  ansible.builtin.systemd:
-    state: started
-    name: nginx
-    enabled: yes
-
-- name: Download code
+- name: download ${{COMPO} code
   include_role:
     name: common
-    tasks_from: download
-
-- name: Copy the Htdocs content
-  ansible.builtin.copy:
-    src: /tmp/frontend-main/static/
-    dest: /usr/share/nginx/html/
-    remote_src: yes
-
-- name: Copy RoboShop Config file
-  ansible.builtin.copy:
-    src: log.conf
-    dest: /etc/nginx/default.d/log.conf
-
-- name: Start Nginx Service
-  ansible.builtin.systemd:
-    state: restarted
-    name: nginx
-    enabled: yes
-
+    task_from: download
 
 
 

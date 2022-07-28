@@ -1,10 +1,10 @@
 pipeline {
 agent any
  stages {
-   stage(variable) {
+   stage(frontend) {
     steps {
-     sh 'touch my.inv'
-     sh 'read -p " ip of node: "  node '
+     sh 'ansible-playbook '
+     sh ''
     }
 
    }

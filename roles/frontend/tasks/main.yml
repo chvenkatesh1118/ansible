@@ -1,5 +1,5 @@
-- name: download "{{COMPO}}" code
-  roles:
+- name: download  code
+  include_role:
     name: common
     task_from: download
 

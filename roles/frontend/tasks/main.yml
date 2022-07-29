@@ -1,4 +1,4 @@
-- name: download ${COMPO} code
+- name: download "{{COMPO}}" code
   roles:
     name: common
     task_from: download

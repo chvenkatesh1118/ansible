@@ -1,0 +1,80 @@
+## some of ansible modules are
+get_url
+copy
+yum
+file
+copy
+service
+archive
+debug
+replace
+
+- name: Download foo.conf
+  ansible.builtin.get_url:
+    url: http://example.com/path/file.conf
+    dest: /etc/foo.conf
+    mode: '0440'
+
+- name: Install a list of packages (suitable replacement for 2.11 loop deprecation warning)
+  ansible.builtin.yum:
+    name:
+      - nginx
+      - postgresql
+      - postgresql-server
+    state: present
+
+- name: Create a directory if it does not exist
+  ansible.builtin.file:
+    path: /etc/some_directory
+    state: directory
+    mode: '0755'
+
+
+
+- name: Remove file (delete file)
+  ansible.builtin.file:
+    path: /etc/foo.txt
+    state: absent
+
+
+- name: Recursively remove directory
+  ansible.builtin.file:
+    path: /etc/foo
+    state: absent
+
+- name: Copy file with owner and permissions
+  ansible.builtin.copy:
+    src: /srv/myfiles/foo.conf
+    dest: /etc/foo.conf
+    owner: foo
+    group: foo
+    mode: '0644'
+
+- name: Start service ngnix
+  ansible.builtin.service:
+    name: nginx
+    state: started
+
+
+
+- name: Unarchive frontend
+  ansible.builtin.unarchive:
+    src: /tmp/frontend.zip
+    dest: /tmp/frontend
+    remote_src: yes
+
+
+- name: Print return information from the previous task
+  ansible.builtin.debug:
+    var: result
+    verbosity: 2
+
+- name: run show version on remote devices
+  ansible.netcommon.cli_command:
+    command: show version
+
+- name: replace ip adress
+  ansible.builtin.replace:
+    path: /etc/mongod.conf
+    regexp: '127.0.0.1'
+    replace: '0.0.0.0'
